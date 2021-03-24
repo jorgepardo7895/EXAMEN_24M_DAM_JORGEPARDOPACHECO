@@ -8,18 +8,21 @@ public class Saludo {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Buenos días Ceinmark, soy Jorge");
 		System.out.println("Introduce un número para averiguar si es primo o no:");
-		int num=sc.nextInt();
+		int num=sc.nextInt(), contador=0;
 		
-		for (int i = 2; i < num; i++) {
-			if (num/i==0) {
-				System.out.println("no es primo");
-			}else {
-				System.out.println("es primo");
-				break;
-			}
+		for(int i = num; i > 0; i--){
+		    if(num % i == 0 ){
+		        contador++;
+		    }
 		}
 		
-
+		if (contador==2) {
+			System.out.println("Es primo");
+		}else {
+			System.out.println("no es primo");
+		}
+		
+		sc.close();
 	}
 
 }
