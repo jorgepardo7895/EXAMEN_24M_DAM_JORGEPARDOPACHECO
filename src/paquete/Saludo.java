@@ -10,6 +10,15 @@ public class Saludo {
 		System.out.println("Introduce un número para averiguar si es primo o no:");
 		int num=sc.nextInt();
 		
+		for (int i = 2; i < num; i++) {
+			if (num/i==0) {
+				System.out.println("no es primo");
+			}else {
+				System.out.println("es primo");
+				break;
+			}
+		}
+		
 
 	}
 
